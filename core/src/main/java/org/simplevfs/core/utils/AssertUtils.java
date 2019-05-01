@@ -10,7 +10,13 @@ public class AssertUtils {
 
     public static void verifyNotEmpty(String s,String message){
         if(s==null||s.trim().isEmpty()){
-            throw new NullPointerException(message);
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    public static void verifyTrue(boolean value,String message){
+        if(value){
+            throw new IllegalArgumentException(message);
         }
     }
 }

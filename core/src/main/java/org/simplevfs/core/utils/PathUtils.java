@@ -11,21 +11,19 @@ public class PathUtils {
         if(relativePaths==null||relativePaths.length==0){
             return path;
         } else {
-            String pathFinal="";
+            StringBuilder pathFinal= new StringBuilder();
             if(!path.getPath().isEmpty()){
-                pathFinal+=path.getPath();
+                pathFinal.append(path.getPath());
             }
-            if(relativePaths.length>0){
-                for(RelativePath relativePath:relativePaths){
-                    if(!relativePath.getPath().isEmpty()){
-                        if(!pathFinal.isEmpty()){
-                            pathFinal+=getSeparator();
-                        }
-                        pathFinal+=relativePath.getPath();
+            for(RelativePath relativePath:relativePaths){
+                if(!relativePath.getPath().isEmpty()){
+                    if(pathFinal.length() > 0){
+                        pathFinal.append(getSeparator());
                     }
+                    pathFinal.append(relativePath.getPath());
                 }
             }
-            return new AbsolutePath(path.getName(),pathFinal);
+            return new AbsolutePath(path.getName(), pathFinal.toString());
         }
     }
 
