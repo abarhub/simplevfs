@@ -37,4 +37,12 @@ public class AbsolutePath extends AbstractPath {
     public int hashCode() {
         return Objects.hash(name, path);
     }
+
+    @Override
+    public String toString() {
+        return "AbsolutePath{" +
+                "name=" + name +
+                ", path='" + path + '\'' +
+                '}';
+    }
 }

@@ -29,4 +29,11 @@ public class RootName {
     public int hashCode() {
         return Objects.hash(name);
     }
+
+    @Override
+    public String toString() {
+        return "RootName{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

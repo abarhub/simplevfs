@@ -29,4 +29,11 @@ public class RelativePath extends AbstractPath {
     public int hashCode() {
         return Objects.hash(path);
     }
+
+    @Override
+    public String toString() {
+        return "RelativePath{" +
+                "path='" + path + '\'' +
+                '}';
+    }
 }
