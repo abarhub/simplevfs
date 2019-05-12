@@ -1,4 +1,12 @@
 package org.simplevfs.core.rootfs.memoryfs;
 
-public class MemoryFs {
+import org.simplevfs.core.rootfs.Fs;
+import org.simplevfs.core.rootfs.FsCommand;
+
+public class MemoryFs implements Fs {
+
+    @Override
+    public FsCommand getFsCommand() {
+        return null;
+    }
 }
