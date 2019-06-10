@@ -11,7 +11,9 @@ public class PathRegistry {
     }
 
     public AbsolutePath getAbsolutePath(RootName name, String path){
-        return new AbsolutePath(name,path);
+        // TODO: to termined
+        //return new AbsolutePath(name,path);
+        return null;
     }
 
     public RelativePath getRelativePath(String path){

@@ -1,0 +1,17 @@
+{
+  "config": [
+    {
+      "name": "aaa01",
+      "path": "bbb01",
+      "implementation": "ccc01",
+      "parameters": {
+        "param1": "xxx01"
+      }
+    },
+    {
+      "name": "aaa02",
+      "path": "bbb02",
+      "implementation": "ccc02"
+    }
+  ]
+}

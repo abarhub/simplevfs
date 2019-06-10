@@ -1,0 +1,34 @@
+{
+  "config": [
+    {
+      "name": "aaa",
+      "path": "bbb",
+      "implementation": "ccc",
+      "parameters": {
+        "param1": "xxx",
+        "param2": "yyy",
+        "param3": "zzz"
+      }
+    },
+    {
+      "name": "aaa2",
+      "path": "bbb2",
+      "implementation": "ccc2",
+      "parameters": {
+        "param1": "xxx2",
+        "param2": "yyy2",
+        "param3": "zzz2"
+      }
+    },
+    {
+      "name": "aaa3",
+      "path": "bbb3",
+      "implementation": "ccc3",
+      "parameters": {
+        "param1": "xxx3",
+        "param2": "yyy3",
+        "param3": "zzz3"
+      }
+    }
+  ]
+}

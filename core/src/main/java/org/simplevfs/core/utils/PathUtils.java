@@ -2,12 +2,14 @@ package org.simplevfs.core.utils;
 
 import org.simplevfs.core.path.AbsolutePath;
 import org.simplevfs.core.path.RelativePath;
+import org.simplevfs.core.rootfs.Fs;
 
 import java.io.File;
 
 public class PathUtils {
 
-    public static AbsolutePath getPath(AbsolutePath path, RelativePath... relativePaths){
+    public static AbsolutePath getPath(Fs fs, AbsolutePath path, RelativePath... relativePaths){
+        AssertUtils.verifyNotNull(fs,"FS must not be null");
         if(relativePaths==null||relativePaths.length==0){
             return path;
         } else {
@@ -23,7 +25,7 @@ public class PathUtils {
                     pathFinal.append(relativePath.getPath());
                 }
             }
-            return new AbsolutePath(path.getName(), pathFinal.toString());
+            return new AbsolutePath(fs, path.getName(), pathFinal.toString());
         }
     }
 

@@ -10,6 +10,7 @@ public class RootName {
 
     public RootName(String name) {
         AssertUtils.verifyNotEmpty(name,"Name must not be null");
+        AssertUtils.verifyValideName(name);
         this.name = name;
     }
 

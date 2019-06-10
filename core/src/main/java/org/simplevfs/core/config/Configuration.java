@@ -5,8 +5,7 @@ import org.simplevfs.core.utils.AssertUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Configuration {
 
@@ -36,5 +35,18 @@ public class Configuration {
     public boolean existPath(RootName name){
         AssertUtils.verifyNotNull(name,"Name must not be null");
         return mapPath.containsKey(name);
+    }
+
+    public List<RootName> getRoots(){
+        Set<RootName> set= mapPath.keySet();
+        return new ArrayList<>(set);
+    }
+
+    public ConfigPath getConfigPath(RootName rootName){
+        if(mapPath.isEmpty()){
+            return null;
+        } else {
+            return mapPath.get(rootName);
+        }
     }
 }
